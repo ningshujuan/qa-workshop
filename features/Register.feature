@@ -1,23 +1,22 @@
 Feature: InforQ Registration
 
-Scenario: 
+Scenario: registration page
 
- Given navigate to the registration page
+ Given I open registration page
 
- When input mandatory registration information
- # |First Name           |Shujuan         |
- # |Last Name            |Ning            |
- # |Email Address        |sjning@126.com  |
- # |Password             |Elsa123         |
- # |Confirm password     |Elsa123         |
- # |Company name         |TW              |
- # |Role in your company |Other           |
- # |Industry             |Utility         |
- # |Company size         |100 or less     |
- # |Country/Zone         |China           |
+ When I input registration information 
+ |Name                 |Value           |
+ |First Name           |Shujuan         |
+ |Last Name            |Ning            |
+ |Email Address        |sjning@126.com  |
+ |Password             |Elsa123         |
+ |Confirm password     |Elsa123         |
+ |Company name         |TW              |
+ |Role in your company |Other           |
+ |Industry             |Utility         |
+ |Company size         |100 or less     |
+ |Country              |China           |
 
-
- # Then submit the registration informantion
 
 
 

@@ -1,18 +1,18 @@
 require 'selenium-webdriver'
 
-Given (/^navigate to the registration page$/) do
-  @registration_page = RegistrationPage.new
+Given (/^I open registration page$/) do
+      @registration_page = RegistrationPage.new Selenium::WebDriver.for :chrome
+      @registration_page.openSite
+end
+When (/^I input registration information$/) do |table|
+     table.hashes.each do |row|
+      	@registration_page.fill_registration_form(row["Name"], row["Value"])
+     end
+     @registration_page.submit
+     sleep(10000)
 end
 
-When (/^input mandatory registration information$/) do
-  @registration_page.fill_registration_form
-  
-end
 
-# Then (/^submit the registration informantion$/) do
-
-
-# end
 
 
 
